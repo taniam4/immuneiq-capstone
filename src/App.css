@@ -5297,3 +5297,434 @@ main:has(.howItWorks) {
     font-size: 15px !important;
   }
 }
+
+
+/* SAFE MOBILE APP RESET — STACK EVERYTHING CLEANLY */
+@media (max-width: 1000px) {
+  html,
+  body,
+  #root {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  * {
+    box-sizing: border-box !important;
+  }
+
+  body {
+    font-size: 16px !important;
+  }
+
+  /* remove horizontal clipping */
+  section,
+  div,
+  main {
+    max-width: 100% !important;
+  }
+
+  /* general page spacing */
+  .page {
+    width: 100% !important;
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+    overflow-x: hidden !important;
+  }
+
+  /* nav */
+  .nav {
+    width: 100% !important;
+    padding: 14px 10px !important;
+    gap: 10px !important;
+  }
+
+  .logo {
+    font-size: 24px !important;
+  }
+
+  .navLinks {
+    gap: 10px !important;
+  }
+
+  .navLinks button {
+    font-size: 15px !important;
+  }
+
+  /* home hero */
+  .hero,
+  .dashboardHero {
+    text-align: center !important;
+    padding: 50px 18px 35px !important;
+  }
+
+  h1,
+  .hero h1,
+  .dashboardHero h1 {
+    font-size: 42px !important;
+    line-height: 1.08 !important;
+    text-align: center !important;
+  }
+
+  h2 {
+    font-size: 30px !important;
+    line-height: 1.15 !important;
+    text-align: center !important;
+  }
+
+  p {
+    font-size: 17px !important;
+    line-height: 1.45 !important;
+  }
+
+  /* buttons */
+  .heroButtons,
+  .topicButtons {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+    width: 100% !important;
+  }
+
+  .heroButtons button,
+  .topicButtons button {
+    width: 100% !important;
+    padding: 16px !important;
+    font-size: 18px !important;
+  }
+
+  /* IMPORTANT: stack scorecard/evidence instead of side scroll */
+  .homeMiddle {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 26px !important;
+    width: 100% !important;
+    padding: 28px 18px !important;
+    overflow: visible !important;
+  }
+
+  .scorecard,
+  .evidenceBox {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: auto !important;
+    padding: 28px 18px !important;
+    position: static !important;
+    transform: none !important;
+    overflow: visible !important;
+  }
+
+  .scoreTop {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+    text-align: center !important;
+  }
+
+  .scoreTop h2 {
+    font-size: 30px !important;
+    line-height: 1.1 !important;
+  }
+
+  .scoreTop span {
+    margin: 0 auto !important;
+    font-size: 15px !important;
+    padding: 12px 14px !important;
+  }
+
+  .barChart {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: end !important;
+    gap: 8px !important;
+    width: 100% !important;
+    overflow: visible !important;
+  }
+
+  .barItem {
+    flex: 1 !important;
+    min-width: 0 !important;
+    text-align: center !important;
+  }
+
+  .bar {
+    width: 34px !important;
+    max-width: 34px !important;
+    margin: 0 auto !important;
+  }
+
+  .barItem p {
+    font-size: 12px !important;
+    line-height: 1.05 !important;
+    white-space: normal !important;
+    word-break: normal !important;
+  }
+
+  /* dashboard stat cards stack */
+  .dashStats,
+  .statCards {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+    width: 100% !important;
+    padding: 0 18px !important;
+    overflow: visible !important;
+  }
+
+  .dashStats > div,
+  .statCard {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+
+  /* tables can scroll sideways */
+  .comparisonTable {
+    width: 100% !important;
+    overflow-x: auto !important;
+    display: block !important;
+  }
+
+  .tableHeader,
+  .tableRow {
+    min-width: 820px !important;
+  }
+
+  /* vitamin insight cards stack */
+  .insightGrid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 22px !important;
+    padding: 0 18px !important;
+    overflow: visible !important;
+  }
+
+  .insightCard {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: auto !important;
+    padding: 26px 22px !important;
+    overflow: visible !important;
+    text-align: center !important;
+  }
+
+  .insightCard h3 {
+    font-size: 32px !important;
+    line-height: 1.1 !important;
+  }
+
+  .scoreBadge {
+    width: 64px !important;
+    height: 64px !important;
+    font-size: 15px !important;
+  }
+
+  /* AI chat bottom section */
+  .howItWorks {
+    padding: 36px 18px !important;
+    overflow: visible !important;
+  }
+
+  .steps {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    width: 100% !important;
+  }
+
+  .stepCard {
+    width: 100% !important;
+    display: grid !important;
+    grid-template-columns: 64px 1fr !important;
+    gap: 16px !important;
+    align-items: center !important;
+    text-align: left !important;
+  }
+
+  .stepCard h3,
+  .stepCard p {
+    text-align: left !important;
+  }
+
+  /* detail pages: full clean stack */
+  .detailPage,
+  .detailHero,
+  .detailTop,
+  .detailMain {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: visible !important;
+  }
+
+  .detailHero,
+  .detailTop,
+  .detailMain {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+    padding: 24px 18px !important;
+  }
+
+  .detailHero *,
+  .detailTop *,
+  .detailMain * {
+    writing-mode: horizontal-tb !important;
+    text-orientation: mixed !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+  }
+
+  .detailTitle {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    justify-items: center !important;
+    text-align: center !important;
+    gap: 14px !important;
+  }
+
+  .detailTitle h1 {
+    font-size: 40px !important;
+    line-height: 1.05 !important;
+  }
+
+  .detailHero button {
+    width: 100% !important;
+    max-width: 280px !important;
+    margin: 0 auto !important;
+  }
+
+  .detailCard,
+  .detailMain > div,
+  .regions,
+  .takeaway {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    height: auto !important;
+    min-height: auto !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+    justify-items: center !important;
+    padding: 26px 20px !important;
+    position: static !important;
+    transform: none !important;
+    overflow: visible !important;
+    text-align: center !important;
+  }
+
+  .detailCard h3,
+  .detailMain h3 {
+    font-size: 28px !important;
+    line-height: 1.15 !important;
+    text-align: center !important;
+  }
+
+  .detailCard p,
+  .detailMain p {
+    font-size: 17px !important;
+    line-height: 1.45 !important;
+    text-align: center !important;
+  }
+
+  .intake {
+    width: 100% !important;
+    max-width: 290px !important;
+    margin: 0 auto !important;
+  }
+
+  .benefitItem {
+    width: 100% !important;
+    max-width: 340px !important;
+    display: grid !important;
+    grid-template-columns: 58px 1fr !important;
+    gap: 14px !important;
+    align-items: center !important;
+    text-align: left !important;
+  }
+
+  .benefitItem span {
+    width: 54px !important;
+    height: 54px !important;
+  }
+
+  .benefitItem img {
+    width: 32px !important;
+    height: 32px !important;
+  }
+
+  .benefitItem p,
+  .benefitItem div,
+  .benefitItem strong {
+    text-align: left !important;
+    font-size: 17px !important;
+    line-height: 1.35 !important;
+  }
+
+  .vitaminMap {
+    width: 100% !important;
+    max-width: 340px !important;
+    height: auto !important;
+    display: block !important;
+    margin: 0 auto !important;
+  }
+
+  .donut {
+    width: 150px !important;
+    height: 150px !important;
+    margin: 0 auto !important;
+  }
+
+  .regions p {
+    font-size: 19px !important;
+    line-height: 1.35 !important;
+  }
+
+  .takeaway {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    text-align: center !important;
+  }
+
+  /* about page */
+  .aboutHero,
+  .missionCard,
+  .aboutDisclaimer,
+  .whatGrid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    text-align: center !important;
+  }
+
+  .dataSources > div {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    justify-items: center !important;
+    gap: 22px !important;
+  }
+
+  .dataSources img {
+    max-width: 220px !important;
+    height: auto !important;
+  }
+
+  /* footer */
+  footer {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    justify-items: center !important;
+    text-align: center !important;
+    gap: 28px !important;
+    padding: 42px 20px !important;
+    overflow: visible !important;
+  }
+
+  footer > div {
+    width: 100% !important;
+    max-width: 320px !important;
+  }
+}
