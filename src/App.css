@@ -5826,3 +5826,146 @@ main:has(.howItWorks) {
     top: 18px !important;
   }
 }
+
+
+
+
+/* FINAL TINY POLISH PATCH */
+@media (max-width: 600px) {
+  /* remove random floating score bubble */
+  body > .scoreBadge,
+  .page > .scoreBadge,
+  .nav + .scoreBadge {
+    display: none !important;
+  }
+
+  /* fix section subtitles being too far left */
+  .dashboardHero p,
+  .sectionSubtitle,
+  .aboutHero p,
+  .insightSection p,
+  .researchSection p {
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+    text-align: center !important;
+    max-width: 100% !important;
+  }
+
+  /* put vitamin card score badges back in corner */
+  .insightCard {
+    position: relative !important;
+    padding-top: 34px !important;
+  }
+
+  .insightCard .scoreBadge {
+    display: flex !important;
+    position: absolute !important;
+    top: 18px !important;
+    right: 18px !important;
+    width: 62px !important;
+    height: 62px !important;
+    font-size: 14px !important;
+    z-index: 3 !important;
+  }
+
+  /* About mission shadow */
+  .missionCard {
+    box-shadow: 0 18px 45px rgba(37, 99, 235, 0.18) !important;
+  }
+
+  /* Detail page: force detail cards into clean stacked sections */
+  .detailMain {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 24px !important;
+  }
+
+  .detailMain > div {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: block !important;
+    padding: 28px 22px !important;
+    text-align: center !important;
+    overflow: hidden !important;
+  }
+
+  .detailMain h3 {
+    writing-mode: horizontal-tb !important;
+    text-orientation: mixed !important;
+    word-break: normal !important;
+    text-align: center !important;
+    font-size: 30px !important;
+    line-height: 1.15 !important;
+    margin-bottom: 20px !important;
+  }
+
+  .benefitItem {
+    display: grid !important;
+    grid-template-columns: 64px 1fr !important;
+    gap: 16px !important;
+    align-items: center !important;
+    max-width: 360px !important;
+    margin: 18px auto !important;
+    text-align: left !important;
+  }
+
+  .benefitItem span {
+    width: 58px !important;
+    height: 58px !important;
+  }
+
+  .benefitItem img {
+    width: 34px !important;
+    height: 34px !important;
+  }
+
+  .benefitItem p,
+  .benefitItem div,
+  .benefitItem strong {
+    text-align: left !important;
+    font-size: 18px !important;
+    line-height: 1.35 !important;
+  }
+
+  .vitaminMap {
+    width: 100% !important;
+    max-width: 330px !important;
+    display: block !important;
+    margin: 18px auto !important;
+  }
+
+  .donut {
+    width: 145px !important;
+    height: 145px !important;
+    margin: 18px auto !important;
+  }
+
+  .regions {
+    display: block !important;
+    text-align: center !important;
+  }
+
+  .regions h3 {
+    font-size: 30px !important;
+    line-height: 1.15 !important;
+    margin-bottom: 18px !important;
+  }
+
+  .regions p {
+    display: block !important;
+    font-size: 20px !important;
+    line-height: 1.4 !important;
+    margin: 10px 0 !important;
+  }
+
+  /* smaller back button */
+  .detailHero button,
+  .backButton {
+    max-width: 220px !important;
+    padding: 12px 16px !important;
+    font-size: 16px !important;
+    justify-self: center !important;
+    margin-left: auto !important;
+    margin-right: 0 !important;
+  }
+}
