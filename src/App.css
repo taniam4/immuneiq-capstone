@@ -3187,3 +3187,82 @@ main:has(.howItWorks) {
     width: 100% !important;
   }
 }
+/* TRUE MOBILE FIX */
+@media (max-width: 768px) {
+  html,
+  body {
+    width: 100%;
+    overflow-x: hidden !important;
+  }
+
+  .nav {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 14px !important;
+    padding: 18px 12px !important;
+  }
+
+  .navLinks {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+    gap: 14px !important;
+  }
+
+  .navLinks button,
+  .navLinks a {
+    font-size: 16px !important;
+    white-space: nowrap !important;
+  }
+
+  .hero {
+    padding: 60px 20px 40px !important;
+    text-align: center !important;
+  }
+
+  .hero h1 {
+    font-size: 46px !important;
+    line-height: 1.05 !important;
+    max-width: 100% !important;
+  }
+
+  .hero p {
+    font-size: 19px !important;
+    line-height: 1.5 !important;
+    max-width: 100% !important;
+  }
+
+  .heroButtons {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+    width: 100% !important;
+  }
+
+  .heroButtons button {
+    width: 100% !important;
+    font-size: 20px !important;
+    padding: 18px !important;
+  }
+
+  .stats,
+  .scoreCards,
+  .insightGrid,
+  .dashboardStats,
+  .whatGrid,
+  .detailTop,
+  .detailGrid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+  }
+
+  .statCard,
+  .insightCard,
+  .card {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
