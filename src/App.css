@@ -4993,3 +4993,307 @@ main:has(.howItWorks) {
     gap: 14px !important;
   }
 }
+
+
+
+
+
+
+/* EMERGENCY FINAL PHONE FIX */
+@media (max-width: 1000px) {
+  html,
+  body,
+  #root {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  * {
+    box-sizing: border-box !important;
+  }
+
+  /* HOME SCORECARD FIX */
+  .homeMiddle {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: flex !important;
+    overflow-x: auto !important;
+    gap: 18px !important;
+    padding: 28px 16px !important;
+  }
+
+  .homeMiddle .scorecard,
+  .homeMiddle .evidenceBox {
+    flex: 0 0 88% !important;
+    min-width: 88% !important;
+    max-width: 88% !important;
+    padding: 28px 18px !important;
+    overflow: hidden !important;
+  }
+
+  .scoreTop {
+    display: block !important;
+    text-align: center !important;
+  }
+
+  .scoreTop h2 {
+    font-size: 34px !important;
+    line-height: 1.1 !important;
+  }
+
+  .scoreTop span {
+    display: block !important;
+    margin: 16px auto !important;
+    font-size: 17px !important;
+    line-height: 1.3 !important;
+  }
+
+  .barChart {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: end !important;
+    gap: 8px !important;
+    width: 100% !important;
+  }
+
+  .barItem {
+    flex: 1 !important;
+    min-width: 0 !important;
+    text-align: center !important;
+  }
+
+  .barItem p {
+    font-size: 12px !important;
+    line-height: 1.05 !important;
+    white-space: normal !important;
+    overflow-wrap: break-word !important;
+  }
+
+  .bar {
+    width: 38px !important;
+    max-width: 38px !important;
+    margin: 0 auto !important;
+  }
+
+  /* VITAMIN DETAIL PAGE FULL RESET */
+  .detailPage,
+  .detailHero,
+  .detailTop,
+  .detailMain {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  .detailHero,
+  .detailTop,
+  .detailMain {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 24px !important;
+    padding: 24px 18px !important;
+  }
+
+  .detailHero *,
+  .detailTop *,
+  .detailMain * {
+    writing-mode: horizontal-tb !important;
+    text-orientation: mixed !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+  }
+
+  .detailTitle {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 14px !important;
+  }
+
+  .detailTitle h1 {
+    font-size: 42px !important;
+    line-height: 1.05 !important;
+    text-align: center !important;
+  }
+
+  .detailHero button {
+    width: 100% !important;
+    max-width: 290px !important;
+    margin: 0 auto !important;
+  }
+
+  .detailCard,
+  .detailMain > div {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 18px !important;
+    padding: 28px 22px !important;
+    text-align: center !important;
+    overflow: hidden !important;
+    position: static !important;
+    transform: none !important;
+  }
+
+  .detailCard h3,
+  .detailMain h3 {
+    width: 100% !important;
+    font-size: 30px !important;
+    line-height: 1.15 !important;
+    text-align: center !important;
+    margin-bottom: 14px !important;
+  }
+
+  .detailCard p,
+  .detailMain p {
+    font-size: 18px !important;
+    line-height: 1.45 !important;
+    text-align: center !important;
+  }
+
+  .intake {
+    width: 100% !important;
+    max-width: 300px !important;
+    margin: 16px auto !important;
+  }
+
+  /* KEY BENEFITS */
+  .benefitItem {
+    width: 100% !important;
+    max-width: 360px !important;
+    display: grid !important;
+    grid-template-columns: 62px 1fr !important;
+    align-items: center !important;
+    gap: 16px !important;
+    text-align: left !important;
+    margin: 14px auto !important;
+  }
+
+  .benefitItem span {
+    width: 58px !important;
+    height: 58px !important;
+  }
+
+  .benefitItem img {
+    width: 34px !important;
+    height: 34px !important;
+    object-fit: contain !important;
+  }
+
+  .benefitItem p,
+  .benefitItem strong,
+  .benefitItem div {
+    text-align: left !important;
+    font-size: 18px !important;
+    line-height: 1.35 !important;
+  }
+
+  /* MAP + DONUT + REGIONS */
+  .vitaminMap {
+    width: 100% !important;
+    max-width: 350px !important;
+    height: auto !important;
+    margin: 16px auto !important;
+    display: block !important;
+  }
+
+  .donut {
+    width: 155px !important;
+    height: 155px !important;
+    margin: 18px auto !important;
+  }
+
+  .regions,
+  .takeaway {
+    width: 100% !important;
+    max-width: 100% !important;
+    position: static !important;
+    transform: none !important;
+    text-align: center !important;
+  }
+
+  .regions p {
+    font-size: 20px !important;
+    line-height: 1.4 !important;
+  }
+
+  .takeaway {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 14px !important;
+    padding: 24px !important;
+  }
+
+  /* AI CHAT HOW IT WORKS */
+  .howItWorks {
+    padding: 36px 18px !important;
+    overflow: hidden !important;
+  }
+
+  .howItWorks .steps,
+  .steps {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+    width: 100% !important;
+  }
+
+  .stepCard {
+    width: 100% !important;
+    display: grid !important;
+    grid-template-columns: 70px 1fr !important;
+    align-items: center !important;
+    gap: 16px !important;
+    text-align: left !important;
+  }
+
+  .stepCard h3,
+  .stepCard p {
+    text-align: left !important;
+    line-height: 1.35 !important;
+  }
+
+  /* DASHBOARD TABLE */
+  .comparisonTable {
+    width: 100% !important;
+    overflow-x: auto !important;
+  }
+
+  .tableHeader,
+  .tableRow {
+    min-width: 820px !important;
+  }
+
+  /* INSIGHT/VITAMIN CARDS */
+  .insightGrid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 24px !important;
+    padding: 0 18px !important;
+  }
+
+  .insightCard {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: auto !important;
+    padding: 28px 24px !important;
+    overflow: hidden !important;
+  }
+
+  .insightCard h3 {
+    font-size: 34px !important;
+    line-height: 1.05 !important;
+  }
+
+  .scoreBadge {
+    width: 68px !important;
+    height: 68px !important;
+    font-size: 15px !important;
+  }
+}
