@@ -3517,3 +3517,128 @@ main:has(.howItWorks) {
     overflow-wrap: break-word !important;
   }
 }
+
+
+
+/* FINAL PHONE FIXES ONLY */
+@media (max-width: 768px) {
+  /* prevent weird sideways overflow */
+  body,
+  html,
+  #root {
+    overflow-x: hidden !important;
+    width: 100% !important;
+  }
+
+  /* HOME: scorecard first, blue evidence card second */
+  .evidenceSection,
+  .scoreSection,
+  .scoreArea {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 24px !important;
+    width: 100% !important;
+    padding: 24px 18px !important;
+    overflow: hidden !important;
+  }
+
+  .effectivenessCard,
+  .scorecard,
+  .scoreCard,
+  .whyEvidence,
+  .evidenceCard {
+    position: static !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    transform: none !important;
+    margin: 0 auto !important;
+  }
+
+  .whyEvidence,
+  .evidenceCard {
+    order: 2 !important;
+    padding: 28px 22px !important;
+    font-size: 16px !important;
+    text-align: center !important;
+  }
+
+  .effectivenessCard,
+  .scorecard,
+  .scoreCard {
+    order: 1 !important;
+  }
+
+  /* dashboard stat cards */
+  .dashboardStats,
+  .statCards {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    padding: 0 20px !important;
+  }
+
+  .statCard {
+    width: 100% !important;
+    min-width: 0 !important;
+    text-align: center !important;
+  }
+
+  /* comparison chart/table scrolls cleanly instead of breaking */
+  .comparisonTable,
+  .vitaminTable,
+  table {
+    display: block !important;
+    width: 100% !important;
+    overflow-x: auto !important;
+    white-space: nowrap !important;
+    padding-bottom: 12px !important;
+  }
+
+  /* about disclaimer not squished */
+  .aboutDisclaimer {
+    display: flex !important;
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 18px !important;
+    padding: 28px 22px !important;
+    width: 100% !important;
+  }
+
+  .aboutDisclaimer img {
+    width: 90px !important;
+    height: auto !important;
+    margin: 0 auto !important;
+  }
+
+  .aboutDisclaimer p {
+    font-size: 16px !important;
+    line-height: 1.55 !important;
+    max-width: 100% !important;
+  }
+
+  /* footer quick links show properly */
+  .footer {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    text-align: center !important;
+    gap: 26px !important;
+    padding: 42px 22px !important;
+    width: 100% !important;
+  }
+
+  .footer h3,
+  .footer h4 {
+    display: block !important;
+    font-size: 22px !important;
+    margin-bottom: 12px !important;
+  }
+
+  .footer a,
+  .footer button,
+  .footer p {
+    display: block !important;
+    font-size: 17px !important;
+    margin: 10px auto !important;
+    color: #2563eb !important;
+  }
+}
