@@ -5977,3 +5977,30 @@ main:has(.howItWorks) {
     transform: none !important;
   }
 }
+
+@media (max-width: 600px) {
+  .barChart {
+    align-items: flex-end !important;
+  }
+
+  .barItem {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+  }
+
+  .barItem .bar {
+    flex-shrink: 0 !important;
+    transform: none !important;
+  }
+
+  .barItem p {
+    height: 34px !important;
+    margin-top: 10px !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+  }
+}
+

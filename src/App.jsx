@@ -29,7 +29,7 @@ const vitamins = {
     color: "#4f9c35",
     light: "#def7d3",
     score: "7.8/10",
-    scoreNum: 8.3,
+    scoreNum: 7.8,
     deficiency: "29%",
     level: "Moderate",
     intake: "8–11 mg/day",
@@ -190,8 +190,7 @@ const res = await fetch("http://localhost:3001/chat", {
   }),
 });
 
-    const data = await response.json();
-
+const data = await res.json();
     setChat([
       ...updatedChat,
       {
@@ -374,8 +373,7 @@ useEffect(() => {
                   <p>{v.overview}</p>
                   <small>{key === "d" ? "Clinical trials + meta-analyses" : "Research-backed immune support"}</small>
                 </div>
-                <span>{v.score}</span>
-                <b>›</b>
+<span className="scoreBadge">{v.score}</span>                <b>›</b>
               </div>
             ))}
           </div>
