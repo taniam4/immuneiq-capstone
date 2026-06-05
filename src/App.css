@@ -5969,3 +5969,11 @@ main:has(.howItWorks) {
     margin-right: 0 !important;
   }
 }
+
+
+@media (max-width: 600px) {
+  .barChart .barItem:nth-child(2) .bar {
+    height: 260px !important;
+    transform: translateY(-12px) !important;
+  }
+}
