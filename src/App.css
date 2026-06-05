@@ -4642,3 +4642,171 @@ main:has(.howItWorks) {
     line-height: 1.45 !important;
   }
 }
+
+
+
+
+
+
+
+/* FINAL POLISH PATCH */
+@media (max-width: 1000px) {
+  /* HOME SCORECARD */
+  .homeMiddle .scorecard {
+    flex: 0 0 92% !important;
+    min-width: 92% !important;
+    max-width: 92% !important;
+    padding: 30px 22px !important;
+  }
+
+  .scoreTop h2 {
+    font-size: 34px !important;
+    line-height: 1.1 !important;
+  }
+
+  .scoreTop span {
+    font-size: 17px !important;
+    line-height: 1.3 !important;
+    padding: 14px 18px !important;
+  }
+
+  .barChart {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: end !important;
+    gap: 8px !important;
+    width: 100% !important;
+  }
+
+  .barItem {
+    flex: 1 !important;
+    min-width: 0 !important;
+  }
+
+  .barItem p {
+    font-size: 15px !important;
+    line-height: 1.15 !important;
+    white-space: normal !important;
+  }
+
+  .bar {
+    width: 42px !important;
+    margin: 0 auto !important;
+  }
+
+  /* DASHBOARD COMPARISON TABLE */
+  .comparisonTable {
+    overflow-x: auto !important;
+    padding-bottom: 12px !important;
+  }
+
+  .tableHeader,
+  .tableRow {
+    min-width: 760px !important;
+    grid-template-columns: 130px 210px 180px 180px 150px !important;
+  }
+
+  .benefitIcons img {
+    width: 36px !important;
+    height: 36px !important;
+  }
+
+  /* CHAT: HOW IT WORKS */
+  .howItWorks {
+    padding: 40px 20px !important;
+  }
+
+  .steps {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+
+  .stepCard {
+    display: grid !important;
+    grid-template-columns: 70px 1fr !important;
+    gap: 18px !important;
+    text-align: left !important;
+    align-items: center !important;
+  }
+
+  .stepCard h3,
+  .stepCard p {
+    text-align: left !important;
+    word-break: normal !important;
+  }
+
+  /* DETAIL PAGE */
+  .detailMain {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 22px !important;
+    padding: 24px 22px !important;
+  }
+
+  .detailMain > div {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 28px 24px !important;
+    overflow: hidden !important;
+    text-align: center !important;
+  }
+
+  .detailMain > div h3 {
+    font-size: 28px !important;
+    line-height: 1.15 !important;
+    writing-mode: horizontal-tb !important;
+    word-break: normal !important;
+  }
+
+  .benefitItem {
+    display: grid !important;
+    grid-template-columns: 64px 1fr !important;
+    gap: 16px !important;
+    align-items: center !important;
+    text-align: left !important;
+    font-size: 18px !important;
+    line-height: 1.35 !important;
+    margin: 18px 0 !important;
+  }
+
+  .benefitItem span {
+    width: 58px !important;
+    height: 58px !important;
+  }
+
+  .benefitItem img {
+    width: 34px !important;
+    height: 34px !important;
+  }
+
+  .vitaminMap {
+    width: 100% !important;
+    max-width: 360px !important;
+    margin: 20px auto !important;
+    display: block !important;
+  }
+
+  .donut {
+    width: 160px !important;
+    height: 160px !important;
+    margin: 20px auto !important;
+  }
+
+  .regions p {
+    font-size: 20px !important;
+    line-height: 1.4 !important;
+  }
+
+  .takeaway {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+    text-align: center !important;
+  }
+
+  .takeaway p {
+    font-size: 17px !important;
+    line-height: 1.45 !important;
+  }
+}
