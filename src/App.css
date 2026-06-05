@@ -4810,3 +4810,186 @@ main:has(.howItWorks) {
     line-height: 1.45 !important;
   }
 }
+
+
+
+
+
+
+
+/* LAST MOBILE FIX */
+@media (max-width: 1000px) {
+  body, html, #root {
+    overflow-x: hidden !important;
+  }
+
+  /* scorecard labels */
+  .barItem p {
+    font-size: 13px !important;
+    line-height: 1.1 !important;
+    white-space: nowrap !important;
+  }
+
+  .bar {
+    width: 42px !important;
+    margin: 0 auto !important;
+  }
+
+  /* vitamin cards */
+  .insightGrid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+    padding: 0 22px !important;
+  }
+
+  .insightCard {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: auto !important;
+    padding: 28px 24px !important;
+    overflow: hidden !important;
+  }
+
+  .insightCard h3 {
+    font-size: 34px !important;
+    line-height: 1.05 !important;
+  }
+
+  .insightCard p,
+  .insightCard small {
+    font-size: 18px !important;
+    line-height: 1.45 !important;
+  }
+
+  .scoreBadge {
+    width: 70px !important;
+    height: 70px !important;
+    font-size: 16px !important;
+  }
+
+  /* comparison table */
+  .comparisonTable {
+    overflow-x: auto !important;
+    width: 100% !important;
+  }
+
+  .tableHeader,
+  .tableRow {
+    min-width: 820px !important;
+  }
+
+  /* AI chat lower section */
+  .howItWorks {
+    padding: 42px 22px !important;
+  }
+
+  .howItWorks .steps,
+  .steps {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+
+  .stepCard {
+    display: grid !important;
+    grid-template-columns: 70px 1fr !important;
+    gap: 18px !important;
+    width: 100% !important;
+    text-align: left !important;
+  }
+
+  .stepCard h3,
+  .stepCard p {
+    text-align: left !important;
+    line-height: 1.35 !important;
+  }
+
+  /* vitamin detail page */
+  .detailHero,
+  .detailTop,
+  .detailMain {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+    padding: 24px 22px !important;
+    overflow: hidden !important;
+  }
+
+  .detailTitle h1 {
+    font-size: 42px !important;
+    line-height: 1.05 !important;
+  }
+
+  .detailMain > div {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    justify-items: center !important;
+    gap: 18px !important;
+    padding: 28px 22px !important;
+    text-align: center !important;
+    overflow: hidden !important;
+    position: static !important;
+    transform: none !important;
+  }
+
+  .detailMain h3 {
+    font-size: 28px !important;
+    line-height: 1.15 !important;
+    writing-mode: horizontal-tb !important;
+    word-break: normal !important;
+    text-align: center !important;
+  }
+
+  .benefitItem {
+    display: grid !important;
+    grid-template-columns: 60px 1fr !important;
+    align-items: center !important;
+    gap: 16px !important;
+    width: 100% !important;
+    max-width: 360px !important;
+    text-align: left !important;
+    font-size: 18px !important;
+    line-height: 1.35 !important;
+  }
+
+  .benefitItem span {
+    width: 56px !important;
+    height: 56px !important;
+  }
+
+  .benefitItem img {
+    width: 34px !important;
+    height: 34px !important;
+    object-fit: contain !important;
+  }
+
+  .vitaminMap {
+    width: 100% !important;
+    max-width: 360px !important;
+    height: auto !important;
+    margin: 12px auto !important;
+  }
+
+  .donut {
+    width: 160px !important;
+    height: 160px !important;
+    margin: 18px auto !important;
+  }
+
+  .regions p {
+    font-size: 20px !important;
+    line-height: 1.4 !important;
+  }
+
+  .takeaway {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    text-align: center !important;
+    gap: 14px !important;
+  }
+}
