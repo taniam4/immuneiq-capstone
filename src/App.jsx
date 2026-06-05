@@ -29,7 +29,7 @@ const vitamins = {
     color: "#4f9c35",
     light: "#def7d3",
     score: "7.8/10",
-    scoreNum: 7.8,
+    scoreNum: 8.3,
     deficiency: "29%",
     level: "Moderate",
     intake: "8–11 mg/day",
@@ -179,11 +179,16 @@ function App() {
   setChat(updatedChat);
 
   try {
-    const response = await fetch("http://localhost:3001/chat", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ message: finalMessage, history: updatedChat }),
-    });
+const res = await fetch("http://localhost:3001/chat", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({
+    message: finalMessage,
+    history: updatedChat,
+  }),
+});
 
     const data = await response.json();
 
@@ -487,7 +492,7 @@ useEffect(() => {
     <p>✔ Vitamin Comparisons</p>
     <p>✔ Research Insights</p>
     <a
-  href="https://public.tableau.com/shared/273D7FB4G?:display_count=n&:origin=viz_share_link"
+  href="https://public.tableau.com/shared/723DCTS2C?:display_count=n&:origin=viz_share_link"
   target="_blank"
   rel="noopener noreferrer"
 >
