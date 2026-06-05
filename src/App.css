@@ -5728,3 +5728,101 @@ main:has(.howItWorks) {
     max-width: 320px !important;
   }
 }
+
+
+/* TRUE PHONE WIDTH FIX */
+@media (max-width: 600px) {
+  html,
+  body,
+  #root,
+  .page,
+  main {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    overflow-x: hidden !important;
+  }
+
+  section {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    overflow-x: hidden !important;
+  }
+
+  .homeMiddle,
+  .detailHero,
+  .detailTop,
+  .detailMain,
+  .howItWorks,
+  .storyboard,
+  .insightGrid {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    overflow: visible !important;
+  }
+
+  .scorecard,
+  .evidenceBox,
+  .detailCard,
+  .detailMain > div,
+  .insightCard,
+  .stepCard,
+  .takeaway,
+  .regions {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 auto !important;
+    position: static !important;
+    transform: none !important;
+    overflow: visible !important;
+  }
+
+  .detailMain * {
+    writing-mode: horizontal-tb !important;
+    text-orientation: mixed !important;
+    word-break: normal !important;
+  }
+
+  .detailMain {
+    gap: 22px !important;
+  }
+
+  .detailMain > div {
+    padding: 24px 18px !important;
+  }
+
+  .benefitItem {
+    display: grid !important;
+    grid-template-columns: 56px 1fr !important;
+    gap: 14px !important;
+    align-items: center !important;
+    text-align: left !important;
+  }
+
+  .vitaminMap {
+    width: 100% !important;
+    max-width: 320px !important;
+    height: auto !important;
+    margin: 0 auto !important;
+  }
+
+  .insightCard h3 {
+    font-size: 34px !important;
+    line-height: 1.05 !important;
+  }
+
+  .scoreBadge {
+    right: 18px !important;
+    top: 18px !important;
+  }
+}
