@@ -3520,6 +3520,10 @@ main:has(.howItWorks) {
 
 
 
+
+
+
+
 /* FINAL PHONE FIXES ONLY */
 @media (max-width: 768px) {
   /* prevent weird sideways overflow */
@@ -3957,5 +3961,233 @@ main:has(.howItWorks) {
   .detailGrid img {
     max-width: 100% !important;
     height: auto !important;
+  }
+}
+
+
+
+
+
+/* FINAL MOBILE OVERRIDE */
+@media (max-width: 768px) {
+  html,
+  body,
+  #root {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  * {
+    box-sizing: border-box !important;
+  }
+
+  /* QUICK LINKS / FOOTER */
+  .footer {
+    width: 100% !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    justify-items: center !important;
+    text-align: center !important;
+    padding: 42px 20px !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+  }
+
+  .footer > div {
+    width: 100% !important;
+    max-width: 300px !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+  }
+
+  .footer h3,
+  .footer h4,
+  .footer p,
+  .footer a,
+  .footer button {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    transform: none !important;
+  }
+
+  /* HOME SCORECARD + EVIDENCE CARD = SIDE SCROLL */
+  .scoreSection,
+  .scoreArea,
+  .evidenceSection {
+    display: flex !important;
+    flex-direction: row !important;
+    overflow-x: auto !important;
+    overflow-y: visible !important;
+    gap: 18px !important;
+    padding: 28px 20px !important;
+    width: 100% !important;
+    scroll-snap-type: x mandatory !important;
+  }
+
+  .scorecard,
+  .scoreCard,
+  .effectivenessCard {
+    flex: 0 0 86% !important;
+    width: 86% !important;
+    max-width: 86% !important;
+    min-height: 430px !important;
+    order: 1 !important;
+    scroll-snap-align: start !important;
+    position: relative !important;
+    left: 0 !important;
+    right: auto !important;
+    transform: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    z-index: 2 !important;
+    overflow: hidden !important;
+  }
+
+  .whyEvidence,
+  .evidenceCard {
+    flex: 0 0 86% !important;
+    width: 86% !important;
+    max-width: 86% !important;
+    min-height: 430px !important;
+    order: 2 !important;
+    scroll-snap-align: start !important;
+    position: relative !important;
+    left: 0 !important;
+    right: auto !important;
+    transform: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    z-index: 1 !important;
+  }
+
+  /* DASHBOARD STAT CARDS = SIDE SCROLL */
+  .dashboardStats,
+  .statCards {
+    display: flex !important;
+    flex-direction: row !important;
+    overflow-x: auto !important;
+    gap: 18px !important;
+    padding: 12px 20px 24px !important;
+    width: 100% !important;
+    scroll-snap-type: x mandatory !important;
+  }
+
+  .dashboardStats .statCard,
+  .statCards .statCard {
+    flex: 0 0 82% !important;
+    width: 82% !important;
+    min-width: 82% !important;
+    scroll-snap-align: start !important;
+  }
+
+  /* TABLE SIDE SCROLL */
+  .comparisonTable,
+  .vitaminTable,
+  table {
+    display: block !important;
+    width: 100% !important;
+    overflow-x: auto !important;
+    white-space: nowrap !important;
+  }
+
+  /* VITAMIN DETAIL PAGE FIX */
+  .detailPage {
+    padding: 24px 18px !important;
+    width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  .detailHeader,
+  .vitaminHeader {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+    text-align: center !important;
+  }
+
+  .detailHeader h1,
+  .vitaminHeader h1 {
+    font-size: 42px !important;
+    line-height: 1.05 !important;
+    text-align: center !important;
+  }
+
+  .backButton {
+    width: 100% !important;
+    max-width: 280px !important;
+    margin: 0 auto !important;
+    font-size: 18px !important;
+    padding: 14px !important;
+  }
+
+  .detailTop {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 22px !important;
+    width: 100% !important;
+  }
+
+  .detailCard,
+  .evidenceDetailCard,
+  .overviewCard {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 24px 20px !important;
+    text-align: center !important;
+  }
+
+  .overviewCard {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  .overviewCard p {
+    font-size: 18px !important;
+    line-height: 1.45 !important;
+    text-align: center !important;
+  }
+
+  .intakeBox,
+  .recommendedBox {
+    width: 100% !important;
+    max-width: 280px !important;
+    margin: 0 auto !important;
+  }
+
+  .detailGrid,
+  .detailsContent,
+  .benefitMapEvidence {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 22px !important;
+    width: 100% !important;
+    overflow: hidden !important;
+  }
+
+  .benefits,
+  .benefitsList,
+  .mapCard,
+  .evidenceTypes,
+  .regionsCard,
+  .takeawayCard {
+    width: 100% !important;
+    max-width: 100% !important;
+    position: static !important;
+    transform: none !important;
+    text-align: center !important;
+    overflow: hidden !important;
+  }
+
+  .mapCard img,
+  .detailGrid img,
+  .detailsContent img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  .takeawayCard {
+    margin-top: 20px !important;
   }
 }
