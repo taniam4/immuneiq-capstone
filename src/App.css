@@ -5973,7 +5973,7 @@ main:has(.howItWorks) {
 
 @media (max-width: 600px) {
   .barChart .barItem:nth-child(2) .bar {
-    height: 205px !important;
+    height: 195px !important;
     transform: none !important;
   }
 }
