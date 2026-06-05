@@ -4460,3 +4460,185 @@ main:has(.howItWorks) {
     margin: 0 auto !important;
   }
 }
+
+
+
+
+
+/* PATCH: fix detail page cards + home scorecard */
+@media (max-width: 1000px) {
+  /* make scorecard readable */
+  .homeMiddle .scorecard {
+    flex: 0 0 88% !important;
+    min-width: 88% !important;
+    max-width: 88% !important;
+    padding: 28px 22px !important;
+  }
+
+  .scoreTop {
+    display: block !important;
+    text-align: center !important;
+  }
+
+  .scoreTop h2 {
+    font-size: 32px !important;
+    line-height: 1.1 !important;
+  }
+
+  .scoreTop span {
+    display: block !important;
+    margin: 14px auto 0 !important;
+    width: fit-content !important;
+    font-size: 16px !important;
+    padding: 12px 18px !important;
+  }
+
+  .barChart {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: end !important;
+    gap: 10px !important;
+    overflow: hidden !important;
+  }
+
+  .barItem {
+    width: 18% !important;
+    min-width: 0 !important;
+    text-align: center !important;
+  }
+
+  .barItem p {
+    font-size: 15px !important;
+    line-height: 1.2 !important;
+    word-break: normal !important;
+  }
+
+  .bar {
+    width: 100% !important;
+    max-width: 46px !important;
+    margin: 0 auto !important;
+  }
+
+  /* detail page: force clean vertical layout */
+  .detailMain {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 24px !important;
+    padding: 24px 20px !important;
+    overflow: visible !important;
+  }
+
+  .detailMain > div {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: auto !important;
+    padding: 26px 20px !important;
+    text-align: center !important;
+    position: static !important;
+    transform: none !important;
+    overflow: visible !important;
+  }
+
+  /* key benefits card */
+  .detailMain > div:first-child {
+    display: block !important;
+  }
+
+  .detailMain > div:first-child h3 {
+    font-size: 28px !important;
+    margin-bottom: 22px !important;
+    writing-mode: horizontal-tb !important;
+    text-orientation: mixed !important;
+    word-break: normal !important;
+  }
+
+  .benefitItem {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 16px !important;
+    width: 100% !important;
+    margin: 18px 0 !important;
+    text-align: left !important;
+    font-size: 18px !important;
+    line-height: 1.35 !important;
+    writing-mode: horizontal-tb !important;
+    word-break: normal !important;
+  }
+
+  .benefitItem span {
+    flex: 0 0 56px !important;
+    width: 56px !important;
+    height: 56px !important;
+  }
+
+  .benefitItem img {
+    width: 34px !important;
+    height: 34px !important;
+    object-fit: contain !important;
+  }
+
+  /* global map card */
+  .detailMain > div:nth-child(2) h3,
+  .detailMain > div:nth-child(3) h3,
+  .regions h3 {
+    font-size: 28px !important;
+    line-height: 1.15 !important;
+    writing-mode: horizontal-tb !important;
+    text-orientation: mixed !important;
+    word-break: normal !important;
+  }
+
+  .vitaminMap {
+    display: block !important;
+    width: 100% !important;
+    max-width: 330px !important;
+    height: auto !important;
+    margin: 20px auto 0 !important;
+  }
+
+  /* donut/circle chart card */
+  .donut {
+    width: 170px !important;
+    height: 170px !important;
+    margin: 24px auto !important;
+    border-width: 28px !important;
+  }
+
+  .legend {
+    font-size: 16px !important;
+    line-height: 1.4 !important;
+    max-width: 280px !important;
+    margin: 0 auto !important;
+  }
+
+  /* regions card */
+  .regions p {
+    font-size: 20px !important;
+    line-height: 1.4 !important;
+    margin: 10px 0 !important;
+  }
+
+  /* takeaway card */
+  .takeaway {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 16px !important;
+    text-align: center !important;
+  }
+
+  .takeaway span {
+    font-size: 54px !important;
+  }
+
+  .takeaway h3 {
+    font-size: 26px !important;
+  }
+
+  .takeaway p {
+    font-size: 17px !important;
+    line-height: 1.45 !important;
+  }
+}
