@@ -3642,3 +3642,115 @@ main:has(.howItWorks) {
     color: #2563eb !important;
   }
 }
+
+
+
+/* FINAL PATCH: scorecard + chat buttons + quick links */
+@media (max-width: 768px) {
+  /* bring scorecard back */
+  .scoreArea,
+  .scoreSection,
+  .evidenceSection {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+    padding: 28px 18px !important;
+    overflow: visible !important;
+  }
+
+  .effectivenessCard,
+  .scorecard,
+  .scoreCard {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    order: 1 !important;
+    position: relative !important;
+    width: 100% !important;
+    min-height: 420px !important;
+    overflow: hidden !important;
+    z-index: 1 !important;
+  }
+
+  .whyEvidence,
+  .evidenceCard {
+    order: 2 !important;
+    position: relative !important;
+    width: 100% !important;
+    margin-top: 0 !important;
+    z-index: 1 !important;
+  }
+
+  /* fix homepage buttons only */
+  .heroButtons {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+    width: 100% !important;
+    padding: 0 18px !important;
+  }
+
+  .heroButtons button {
+    width: 100% !important;
+    max-width: 100% !important;
+    font-size: 18px !important;
+    padding: 16px !important;
+    border-radius: 14px !important;
+  }
+
+  /* undo messed up AI chat quick buttons */
+  .chatSection .followUps {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    width: 100% !important;
+    margin-top: 20px !important;
+  }
+
+  .chatSection .followUps button {
+    width: 100% !important;
+    max-width: 100% !important;
+    font-size: 15px !important;
+    padding: 14px 16px !important;
+    border-radius: 14px !important;
+  }
+
+  /* fix quick links/footer */
+  .footer {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+    text-align: center !important;
+    padding: 42px 22px !important;
+    min-height: auto !important;
+  }
+
+  .footer div {
+    display: block !important;
+  }
+
+  .footer h3,
+  .footer h4 {
+    display: block !important;
+    color: #0f172a !important;
+    font-size: 22px !important;
+    margin-bottom: 14px !important;
+  }
+
+  .footer a,
+  .footer button,
+  .footer p {
+    display: block !important;
+    color: #2563eb !important;
+    font-size: 17px !important;
+    font-weight: 700 !important;
+    margin: 10px auto !important;
+    text-decoration: none !important;
+  }
+
+  .footer .logo,
+  .footerLogo {
+    font-size: 28px !important;
+    margin-bottom: 12px !important;
+  }
+}
