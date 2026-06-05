@@ -179,7 +179,7 @@ function App() {
   setChat(updatedChat);
 
   try {
-const res = await fetch("https://immuneiq-server.onrender.com", {
+const res = await fetch("https://immuneiq-server.onrender.com/chat", {
   method: "POST",
   headers: {
     "Content-Type": "application/json",
