@@ -148,7 +148,7 @@ const benefitIcons = {
 };
 
 function App() {
-  const [page, goToPage] = useState("home");
+  const [page, setPage] = useState("home");
   const [selectedVitamin, setSelectedVitamin] = useState("d");
   const [message, setMessage] = useState("");
   const chatWindowRef = useRef(null);
@@ -161,7 +161,7 @@ function App() {
   ]);
 
   function goToPage(newPage) {
-  goToPage(newPage);
+  setPage(newPage);
   setTimeout(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, 50);
