@@ -6098,3 +6098,31 @@ main:has(.howItWorks) {
     height: 20px;
   }
 }
+.vitaminIcon {
+  overflow: hidden;
+}
+
+.vitaminMainImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.vitaminHeaderIcon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.vitaminHeaderImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}

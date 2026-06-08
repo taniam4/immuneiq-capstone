@@ -4,7 +4,8 @@ import "./App.css";
 const vitamins = {
   d: {
     name: "Vitamin D",
-    icon: "☀️",
+    mainImage: "/vitamindMain.png",
+mainBg: "#cce0fc",
     color: "#2563eb",
     light: "#cfe5ff",
     dark: "#1d4ed8",
@@ -37,7 +38,8 @@ evidenceColors: [
   },
   zinc: {
     name: "Zinc",
-    icon: "🛡️",
+   mainImage: "/zincMain.png",
+mainBg: "#e8f9dd",
     color: "#4f9c35",
     light: "#def7d3",
     dark: "#15803d",
@@ -70,7 +72,8 @@ evidenceColors: [
   },
   c: {
     name: "Vitamin C",
-    icon: "🍊",
+   mainImage: "/vitamincMain.png",
+mainBg: "#fcebba",
     color: "#f59e0b",
     light: "#ffe9b5",
     dark: "#d97706",
@@ -103,7 +106,8 @@ evidenceColors: [
   },
   b6: {
     name: "Vitamin B6",
-    icon: "🧠",
+  mainImage: "/vitaminb6Main.png",
+mainBg: "#dfd2f4",
     color: "#a855f7",
     light: "#e9d5ff",
     dark: "#7e22ce",
@@ -136,7 +140,8 @@ evidenceColors: [
   },
   e: {
     name: "Vitamin E",
-    icon: "💗",
+    mainImage: "/vitamineMain.png",
+mainBg: "#f9d8e2",
     color: "#ec4899",
     light: "#ffd6e7",
     dark: "#be185d",
@@ -807,10 +812,20 @@ useEffect(() => {
     return (
       <main>
         <section className="detailHero">
-          <div className="detailTitle">
-            <span style={{ background: v.light }}>{v.icon}</span>
-            <h1>{v.name}</h1>
-          </div>
+<div className="detailTitle">
+  <span
+    className="vitaminHeaderIcon"
+    style={{ background: v.mainBg }}
+  >
+    <img
+      src={v.mainImage}
+      alt={v.name}
+      className="vitaminHeaderImage"
+    />
+  </span>
+
+  <h1>{v.name}</h1>
+</div>
 
 <button onClick={() => goToPage("dashboard")}>← Back to Dashboard</button>
         </section>
