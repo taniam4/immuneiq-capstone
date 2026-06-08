@@ -6110,8 +6110,9 @@ main:has(.howItWorks) {
 }
 
 .vitaminHeaderIcon {
-  width: 70px;
-  height: 70px;
+  width: 145px;
+  height: 145px;
+  min-width: 145px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -6121,8 +6122,8 @@ main:has(.howItWorks) {
 }
 
 .vitaminHeaderImage {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 72%;
+  height: 72%;
+  object-fit: contain;
   display: block;
 }
