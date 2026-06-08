@@ -6004,3 +6004,51 @@ main:has(.howItWorks) {
   }
 }
 
+
+
+.evidenceTypesBlock {
+  width: 100%;
+  text-align: center;
+}
+
+.evidenceTypesLayout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.evidenceChartImage {
+  width: 230px;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.evidenceTypeLegend {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-weight: 800;
+}
+
+.evidenceTypeLegend p {
+  margin: 0;
+  font-size: 16px;
+}
+
+@media (max-width: 700px) {
+  .evidenceTypesLayout {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .evidenceChartImage {
+    width: 210px;
+  }
+
+  .evidenceTypeLegend p {
+    font-size: 15px;
+  }
+}

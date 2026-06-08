@@ -20,6 +20,12 @@ const vitamins = {
       "Supports overall bone and muscle health",
     ],
     regions: ["South Asia", "Africa", "Middle East"],
+    chart: "/vitamindChart.png",
+evidenceTypes: [
+  { label: "Review Studies", percent: "57%" },
+  { label: "Clinical Trials", percent: "29%" },
+  { label: "Meta-Analysis", percent: "14%" },
+],
     takeaway:
       "Vitamin D plays a critical role in immune defense and respiratory health, with the highest global deficiency rates among all vitamins.",
   },
@@ -41,6 +47,12 @@ const vitamins = {
       "Helps reduce inflammation",
     ],
     regions: ["South Asia", "Sub-Saharan Africa", "Middle East"],
+    chart: "/zincChart.png",
+evidenceTypes: [
+  { label: "Review Studies", percent: "83%" },
+  { label: "Clinical Trials", percent: "17%" },
+  { label: "Meta-Analysis", percent: "0%" },
+],
     takeaway:
       "Zinc is vital for immune defense and cellular repair, with a moderate global deficiency concern.",
   },
@@ -62,6 +74,12 @@ const vitamins = {
       "Helps maintain healthy skin and tissues",
     ],
     regions: ["South Asia", "Latin America", "Africa"],
+    chart: "/vitaminCChart.png",
+evidenceTypes: [
+  { label: "Review Studies", percent: "80%" },
+  { label: "Clinical Trials", percent: "20%" },
+  { label: "Meta-Analysis", percent: "0%" },
+],
     takeaway:
       "Vitamin C is widely recognized for antioxidant properties and immune support, with moderate global deficiency.",
   },
@@ -83,6 +101,12 @@ const vitamins = {
       "Aids in metabolism and energy production",
     ],
     regions: ["South Asia", "Africa", "Latin America"],
+    chart: "/vitaminb6Chart.png",
+evidenceTypes: [
+  { label: "Review Studies", percent: "100%" },
+  { label: "Clinical Trials", percent: "0%" },
+  { label: "Meta-Analysis", percent: "0%" },
+],
     takeaway:
       "Vitamin B6 supports multiple critical body functions, with lower deficiency rates but still important in vulnerable regions.",
   },
@@ -104,6 +128,12 @@ const vitamins = {
       "Supports immune response",
     ],
     regions: ["Africa", "Middle East", "Southeast Asia"],
+    chart: "/vitaminEChart.png",
+evidenceTypes: [
+  { label: "Review Studies", percent: "100%" },
+  { label: "Clinical Trials", percent: "0%" },
+  { label: "Meta-Analysis", percent: "0%" },
+],
     takeaway:
       "Vitamin E provides antioxidant and immune support with lower global deficiency compared to other key vitamins.",
   },
@@ -118,7 +148,7 @@ const benefitIcons = {
 };
 
 function App() {
-  const [page, setPage] = useState("home");
+  const [page, goToPage] = useState("home");
   const [selectedVitamin, setSelectedVitamin] = useState("d");
   const [message, setMessage] = useState("");
   const chatWindowRef = useRef(null);
@@ -129,6 +159,13 @@ function App() {
       text: "Hi, I’m ImmuneIQ AI.\n\nHow can I help you today?",
     },
   ]);
+
+  function goToPage(newPage) {
+  goToPage(newPage);
+  setTimeout(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, 50);
+}
   
 
 
@@ -225,19 +262,19 @@ useEffect(() => {
   function Nav() {
     return (
       <nav className="nav">
-        <div className="logo" onClick={() => setPage("home")}>ImmuneIQ</div>
+        <div className="logo" onClick={() => goToPage("home")}>ImmuneIQ</div>
 
         <div className="navLinks">
           <span
             className={page === "dashboard" ? "active" : ""}
-            onClick={() => setPage("dashboard")}
+            onClick={() => goToPage("dashboard")}
           >
             ❖ Dashboard
           </span>
 
           <span
             className={page === "chat" ? "active navChat" : "navChat"}
-            onClick={() => setPage("chat")}
+            onClick={() => goToPage("chat")}
           >
             <img src="/chatbubble.png" alt="chat" className="topChatIcon" />
             Immune Chat
@@ -245,7 +282,7 @@ useEffect(() => {
 
           <span
             className={page === "about" ? "active" : ""}
-            onClick={() => setPage("about")}
+            onClick={() => goToPage("about")}
           >
             ⓘ About
           </span>
@@ -264,15 +301,15 @@ useEffect(() => {
 
         <div className="footerColumn">
           <h3>Quick Links</h3>
-          <p onClick={() => setPage("dashboard")}>Dashboard</p>
-          <p onClick={() => setPage("chat")}>Immune Chat</p>
+          <p onClick={() => goToPage("dashboard")}>Dashboard</p>
+          <p onClick={() => goToPage("chat")}>Immune Chat</p>
           <p>Vitamins</p>
           <p>Research</p>
         </div>
 
         <div className="footerColumn">
           <h3>Resources</h3>
-          <p onClick={() => setPage("about")}>About Us</p>
+          <p onClick={() => goToPage("about")}>About Us</p>
           <p>Methodology</p>
           <p>Data Sources</p>
           <p>FAQ</p>
@@ -304,8 +341,8 @@ useEffect(() => {
           </p>
 
           <div className="heroButtons">
-            <button onClick={() => setPage("chat")}>Chat with AI Researcher</button>
-            <button onClick={() => setPage("dashboard")}>View Scorecard</button>
+            <button onClick={() => goToPage("chat")}>Chat with AI Researcher</button>
+            <button onClick={() => goToPage("dashboard")}>View Scorecard</button>
           </div>
         </section>
 
@@ -365,7 +402,7 @@ useEffect(() => {
                 key={key}
                 onClick={() => {
                   setSelectedVitamin(key);
-                  setPage("detail");
+                  goToPage("detail");
                 }}
               >
                 <div>
@@ -456,7 +493,7 @@ useEffect(() => {
   className={`detailsBtn ${key}`}
   onClick={() => {
     setSelectedVitamin(key);
-    setPage("detail");
+    goToPage("detail");
   }}
 >
                   View Details
@@ -745,7 +782,7 @@ useEffect(() => {
             <h1>{v.name}</h1>
           </div>
 
-          <button onClick={() => setPage("dashboard")}>← Back to Dashboard</button>
+<button onClick={() => goToPage("dashboard")}>← Back to Dashboard</button>
         </section>
 
         <section className="detailTop">
@@ -806,11 +843,35 @@ useEffect(() => {
 />
           </div>
 
-          <div>
-            <h3>Top Evidence Types</h3>
-            <div className="donut" style={{ borderColor: v.color }}></div>
-            <p className="legend">Review Studies • Clinical Trials • Meta-Analysis</p>
-          </div>
+<div className="evidenceTypesBlock">
+  <h3>Top Evidence Types</h3>
+
+  <div className="evidenceTypesLayout">
+    <img
+      src={v.chart}
+      alt={`${v.name} evidence chart`}
+      className="evidenceChartImage"
+    />
+
+    <div className="evidenceTypeLegend">
+      {v.evidenceTypes.map((item, index) => (
+        <p
+          key={item.label}
+          style={{
+            color:
+              index === 0
+                ? v.color
+                : index === 1
+                ? v.color
+                : v.color,
+          }}
+        >
+          {item.label} ({item.percent})
+        </p>
+      ))}
+    </div>
+  </div>
+</div>
 
           <div className="regions">
             <h3>Top Deficient Regions:</h3>
