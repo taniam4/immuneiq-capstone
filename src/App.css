@@ -6052,3 +6052,49 @@ main:has(.howItWorks) {
     font-size: 15px;
   }
 }
+
+
+.evidenceTypeLegend {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.evidenceLegendRow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.evidenceLegendDot {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: inline-block;
+  border: 2px solid;
+  flex-shrink: 0;
+}
+
+.evidenceLegendText {
+  color: #5f6673;
+  font-weight: 800;
+  font-size: 17px;
+  white-space: nowrap;
+}
+
+@media (max-width: 700px) {
+  .evidenceTypeLegend {
+    align-items: center;
+  }
+
+  .evidenceLegendText {
+    font-size: 16px;
+  }
+
+  .evidenceLegendDot {
+    width: 20px;
+    height: 20px;
+  }
+}

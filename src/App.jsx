@@ -7,6 +7,7 @@ const vitamins = {
     icon: "☀️",
     color: "#2563eb",
     light: "#cfe5ff",
+    dark: "#1d4ed8",
     score: "9.3/10",
     scoreNum: 9.3,
     deficiency: "45%",
@@ -34,6 +35,7 @@ evidenceTypes: [
     icon: "🛡️",
     color: "#4f9c35",
     light: "#def7d3",
+    dark: "#15803d",
     score: "7.8/10",
     scoreNum: 7.8,
     deficiency: "29%",
@@ -61,6 +63,7 @@ evidenceTypes: [
     icon: "🍊",
     color: "#f59e0b",
     light: "#ffe9b5",
+    dark: "#d97706",
     score: "6.6/10",
     scoreNum: 6.6,
     deficiency: "23%",
@@ -88,6 +91,7 @@ evidenceTypes: [
     icon: "🧠",
     color: "#a855f7",
     light: "#e9d5ff",
+    dark: "#7e22ce",
     score: "4.8/10",
     scoreNum: 4.8,
     deficiency: "21%",
@@ -115,6 +119,7 @@ evidenceTypes: [
     icon: "💗",
     color: "#ec4899",
     light: "#ffd6e7",
+    dark: "#be185d",
     score: "4.8/10",
     scoreNum: 4.8,
     deficiency: "17%",
@@ -853,23 +858,28 @@ useEffect(() => {
       className="evidenceChartImage"
     />
 
-    <div className="evidenceTypeLegend">
-      {v.evidenceTypes.map((item, index) => (
-        <p
-          key={item.label}
-          style={{
-            color:
-              index === 0
-                ? v.color
-                : index === 1
-                ? v.color
-                : v.color,
-          }}
-        >
-          {item.label} ({item.percent})
-        </p>
-      ))}
+<div className="evidenceTypeLegend">
+  {v.evidenceTypes.map((item, index) => (
+    <div className="evidenceLegendRow" key={item.label}>
+      <span
+        className="evidenceLegendDot"
+        style={{
+          background:
+            index === 0
+              ? v.light
+              : index === 1
+              ? v.color
+              : v.dark || v.color,
+          borderColor: v.color,
+        }}
+      ></span>
+
+      <span className="evidenceLegendText">
+        {item.label} ({item.percent})
+      </span>
     </div>
+  ))}
+</div>
   </div>
 </div>
 
