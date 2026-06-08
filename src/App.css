@@ -6073,7 +6073,7 @@ main:has(.howItWorks) {
   height: 24px;
   border-radius: 50%;
   display: inline-block;
-  border: 2px solid;
+  border: none;
   flex-shrink: 0;
 }
 

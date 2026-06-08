@@ -27,6 +27,11 @@ evidenceTypes: [
   { label: "Clinical Trials", percent: "29%" },
   { label: "Meta-Analysis", percent: "14%" },
 ],
+evidenceColors: [
+  "#9ac4ea",
+  "#6fa6d9",
+  "#3476b5"
+],
     takeaway:
       "Vitamin D plays a critical role in immune defense and respiratory health, with the highest global deficiency rates among all vitamins.",
   },
@@ -54,6 +59,11 @@ evidenceTypes: [
   { label: "Review Studies", percent: "83%" },
   { label: "Clinical Trials", percent: "17%" },
   { label: "Meta-Analysis", percent: "0%" },
+],
+evidenceColors: [
+  "#b8efa3",
+  "#8dd875",
+  "#50ad35"
 ],
     takeaway:
       "Zinc is vital for immune defense and cellular repair, with a moderate global deficiency concern.",
@@ -83,6 +93,11 @@ evidenceTypes: [
   { label: "Clinical Trials", percent: "20%" },
   { label: "Meta-Analysis", percent: "0%" },
 ],
+evidenceColors: [
+  "#fac466",
+  "#e8a637",
+  "#d08128"
+],
     takeaway:
       "Vitamin C is widely recognized for antioxidant properties and immune support, with moderate global deficiency.",
   },
@@ -111,6 +126,11 @@ evidenceTypes: [
   { label: "Clinical Trials", percent: "0%" },
   { label: "Meta-Analysis", percent: "0%" },
 ],
+evidenceColors: [
+  "#c69af0",
+  "#a25be4",
+  "#6f2fc5"
+],
     takeaway:
       "Vitamin B6 supports multiple critical body functions, with lower deficiency rates but still important in vulnerable regions.",
   },
@@ -138,6 +158,11 @@ evidenceTypes: [
   { label: "Review Studies", percent: "100%" },
   { label: "Clinical Trials", percent: "0%" },
   { label: "Meta-Analysis", percent: "0%" },
+],
+evidenceColors: [
+  "#f2acd2",
+  "#d45c98",
+  "#bd2b70"
 ],
     takeaway:
       "Vitamin E provides antioxidant and immune support with lower global deficiency compared to other key vitamins.",
@@ -863,15 +888,9 @@ useEffect(() => {
     <div className="evidenceLegendRow" key={item.label}>
       <span
         className="evidenceLegendDot"
-        style={{
-          background:
-            index === 0
-              ? v.light
-              : index === 1
-              ? v.color
-              : v.dark || v.color,
-          borderColor: v.color,
-        }}
+style={{
+  background: v.evidenceColors[index],
+}}
       ></span>
 
       <span className="evidenceLegendText">
