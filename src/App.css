@@ -6121,8 +6121,8 @@ main:has(.howItWorks) {
 }
 
 .vitaminHeaderImage {
-  width: 55%;
-  height: 55%;
+  width: 68%;
+  height: 68%;
   object-fit: contain;
   display: block;
 }
