@@ -2322,12 +2322,16 @@ footer {
 .takeaway {
   grid-column: span 2;
   display: grid;
-  grid-template-columns: 70px 1fr;
+  grid-template-columns: 80px 1fr;
+
   align-items: center;
-  gap: 18px;
+  gap: 26px;
+
   border-radius: 14px;
-  padding: 24px 32px;
-  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.14);
+
+  padding: 38px 42px;
+
+  min-height: 170px;
 }
 
 .takeaway span {
@@ -2335,16 +2339,14 @@ footer {
 }
 
 .takeaway h3 {
-  margin: 0 0 8px;
-  font-size: 18px;
+  margin: 0 0 14px;
+  font-size: 20px;
 }
 
 .takeaway p {
-  color: #0f172a;
-  font-size: 18px;
-  line-height: 1.45;
-  font-weight: 500;
-  margin: 0;
+  font-size: 20px;
+  line-height: 1.7;
+  max-width: 95%;
 }
 
 /* make color accents softer but still visible */
